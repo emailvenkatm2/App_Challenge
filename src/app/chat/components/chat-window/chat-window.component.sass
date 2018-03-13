@@ -1,0 +1,23 @@
+$grey-color: #ddd
+$light-grey: #dfe5ec
+$white: #ffffff
+
+.chat-window
+  display: grid
+  grid-gap: 10px
+  grid-template-columns: 1fr
+  grid-template-areas: "chat-message" "chat-form"
+  grid-template-rows: 10fr 1fr
+  height: calc(100vh - 10px)
+
+.chat-message
+  grid-area: chat-message
+.chat-form
+  grid-area: chat-form
+  background: $grey-color
+  padding: 13px 0 8px 0
+  bottom: 0
+  position: sticky
+.chat-window
+	background: $white
+	box-shadow: 0px 1px 0 $light-grey

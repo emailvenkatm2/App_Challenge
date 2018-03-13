@@ -1,0 +1,10 @@
+<form [formGroup]="chatForm" class="chatForm">
+    <div class="text-box">
+        <textarea name="chatText" #messageText formControlName="chatText" class="form-control message_input_text" placeholder="Write something here"
+        (keyup.enter)="sendMessage(messageText)">
+        </textarea>
+    </div>
+    <div class="chatButton" *ngIf="messageText.value.trim().length">
+        <span class="icon icon-send" (click)="sendMessage(messageText)"></span>
+    </div>
+</form>

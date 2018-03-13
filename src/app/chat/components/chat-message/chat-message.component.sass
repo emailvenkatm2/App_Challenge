@@ -1,0 +1,83 @@
+$grey-color: #ddd
+$light-blue: #008cba
+$white: #ffffff
+$grey: #bbb
+.container
+	padding: 10px
+	height: 540px
+	overflow-x: hidden
+	overflow-y: auto
+	.message
+		.avatar
+			display: inline-block
+			border-radius: 50%
+			.icon
+				height: 42px
+				width: auto
+				border-radius: 50%
+		.bubble
+			text-align: left
+			display: inline-block
+			background: $grey-color 
+			padding: 12px
+			margin-bottom: 2px
+			position: relative
+			max-width: 60%
+			border-radius: 8px
+			font-family: sans-serif
+			min-width: 50px
+			.text
+				word-wrap: break-word
+		.bubble:after
+				content: ''
+				position: absolute
+				border: 10px solid transparent
+		.timestamp
+			color: $grey
+			font-size: 14px
+			margin-top: 10px
+			margin-bottom: -8px
+		.left 
+			text-align: left
+			.avatar
+				float: left
+			.bubble
+				margin-left: 5px
+				background: $light-blue
+				color: $white
+			.bubble:after
+				top: 0px
+				left: -10px
+				border-top: 10px solid $light-blue
+			.timestamp
+				text-align: right
+				color: $white
+				opacity: 0.5
+		.right 
+			text-align: right
+			.avatar
+				float: right
+			.bubble
+				margin-right: 5px
+			.bubble:after
+				top: 0px
+				right: -10px
+				border-top: 10px solid $grey-color
+			.timestamp
+				text-align: left
+.button
+  background-color: $light-blue
+  border: none
+  color: white
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 16px
+  margin: 4px 2px
+  cursor: pointer
+.next-product-btn
+  padding: 10px 33px 9px 37px
+  margin-left: 79px
+  margin-top: -9px	
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)	
+  border-radius: 2px		

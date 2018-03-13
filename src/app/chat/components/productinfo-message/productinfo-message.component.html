@@ -1,0 +1,24 @@
+<div style="margin: 0.5em 3.5em; display: table" class="container">
+    <app-carousel [itemsPerPage]="1" [singlItemWidth]="200">
+        <ng-container *ngFor="let product of message?.products;">
+            <ng-container *appCarousel>
+                <div class="product-card">
+                    <div class="product-title">{{product.productName}}</div>
+                    <div>
+                        <img class="image" src="{{product.productImage}}">
+                    </div>
+                    <div>
+                        <span class="price">{{product.price}}</span>
+                        <span class="stock">{{product.inStock?'In stock':'Out of stock'}}</span>
+                    </div>
+                    <!-- <div class="desc">
+                        <span [innerHTML]= "product.shortDescription"></span>
+                    </div> -->
+                    <div class="star-rating">
+                        <span [ngStyle]="{'width': (product.reviewCount/5) * 100 + '%'}" class="rating"></span>
+                    </div>
+                </div>
+            </ng-container>
+        </ng-container>
+    </app-carousel>
+</div>

@@ -1,0 +1,7 @@
+<div class="chat-window">
+  <app-chat-message  class="chat-message"
+  (isNextClicked)="getNextProducts($event)" [messages]="messages">
+ </app-chat-message>
+  <app-chat-form class="chat-form" (onMessageSent)="onMessageSent($event)">
+  </app-chat-form>
+</div>

@@ -1,0 +1,21 @@
+    <div class="container" #autoFocus [scrollTop]="autoFocus.scrollHeight">
+        <div class="message" *ngFor="let message of messages">
+            <div [ngClass]="isSystemUser(message) ? 'left' : 'right' ">
+                <div class="avatar">
+                    <img class="icon" src="{{ isSystemUser(message) ? 'assets/avatar.png' : 'assets/avatar.png' }}">
+                </div>
+                <div class="bubble">
+                    <div class="text">{{message.content}} </div>
+                    <div class="timestamp">{{message.sentTime}}</div>
+                </div>
+              <!-- 
+                   Only display the carousel when the product exists in message
+               -->
+                <ng-container *ngIf="message.products">
+                    <app-productinfo-message [message]="message"></app-productinfo-message>
+                    <div class="button next-product-btn"
+                    (click)="getNextProducts(messageText)">See Next 5 Products</div>
+                </ng-container>
+            </div>
+        </div>
+    </div>

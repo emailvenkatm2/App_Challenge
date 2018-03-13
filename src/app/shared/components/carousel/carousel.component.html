@@ -1,0 +1,11 @@
+<div class="caraousel-container">
+  <span class="icon-angle-left scrollArrow" style="cursor: pointer;" (click)="rendorPreviousPage()"></span>
+  <section class="carousel-grid" [ngStyle]="carouselWrapperStyle">
+    <ul class="carousel-body" #carousel>
+      <li *ngFor="let item of totalItems;" #carouselSignleItem>
+        <ng-container [ngTemplateOutlet]="item.template"></ng-container>
+      </li>
+    </ul>
+  </section>
+  <span class="icon-angle-right scrollArrow" (click)="rendorNextPage()"></span>
+</div>
